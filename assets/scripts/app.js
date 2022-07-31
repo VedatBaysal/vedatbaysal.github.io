@@ -200,9 +200,7 @@ class Match {
       for (let i = 0; i < el.length; i++) {
         if (el[i].dataset.role === role) {
           el[i].remove();
-          if (callback) {
-            callback();
-          }
+          this.timer.changeStatus(role, true);
           return;
         }
       }
