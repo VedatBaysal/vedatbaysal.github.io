@@ -4,7 +4,7 @@ const recognition = new SpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
 isStopped = false;
-recognition.lang = "tr-TR";
+recognition.lang = "en-US";
 
 window.addEventListener("unload", () => {
   recognition.stop();
@@ -31,7 +31,7 @@ recognition.onend = () => {
 let readOutLound = (message) => {
   const speech = new SpeechSynthesisUtterance();
   speech.text = message;
-  speech.lang = "tr-TR";
+  speech.lang = "en-US";
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;
